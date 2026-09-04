@@ -1,0 +1,429 @@
+/* ==========================
+   ESTILO GERAL DA PÁGINA
+   ========================== */
+
+body{
+
+    font-family:"Times New Roman", Times, serif;
+    /* Define a fonte padrão de todo o site como Arial. */
+
+    margin:0;
+    /* Remove as margens externas padrão do navegador. */
+
+     background:#F5F5F5;
+    /* Define uma cor de fundo cinza bem clara para a página. */
+
+
+    color:#222;
+    /* Define a cor padrão dos textos como cinza escuro. */
+
+    font-size:18px;
+    /* Define o tamanho padrão da fonte em 18 pixels,
+       facilitando a leitura. */
+
+    transition:.3s;
+    /* Cria uma animação suave de 0,3 segundos sempre que
+       alguma propriedade visual for alterada, como cores
+       no modo escuro ou alto contraste. */
+
+}
+
+/* ==========================
+   CABEÇALHO
+   ========================== */
+
+header{
+    display:flex;                  /* Coloca os elementos na mesma linha */
+    justify-content:space-between; /* Título à esquerda e botões à direita */
+    align-items:center;            /* Alinha verticalmente */
+
+    background:#77B0D4;
+    /* Cor azul do fundo do cabeçalho. */
+
+    color:white;
+    /* Define a cor do texto como branco. */
+
+    padding:10px;
+    /* Adiciona um espaçamento interno de 10 pixels
+       em todos os lados. */
+
+    text-align:center;
+    /* Centraliza o título dentro do cabeçalho. */
+
+    transition:.3s;
+    /* Cria uma animação suave de 0,3 segundos sempre que
+       alguma propriedade visual for alterada, como cores
+       no modo escuro ou alto contraste. */
+
+}
+
+/* ==========================
+   MENU DE BOTÕES
+   ========================== */
+
+nav{
+
+    display:flex;
+    /* Organiza os botões utilizando Flexbox. */
+
+    justify-content:center;
+    /* Centraliza horizontalmente os botões. */
+
+    gap:10px;
+    /* Define um espaço de 10 pixels entre os botões. */
+
+    padding:20px;
+    /* Adiciona espaçamento interno ao redor dos botões. */
+
+    flex-wrap:wrap;
+    /* Permite que os botões passem para outra linha
+       quando não houver espaço suficiente,
+       tornando o layout responsivo. */
+
+}
+
+/* ==========================
+   BOTÕES
+   ========================== */
+
+button{
+
+    padding:15px;
+    /* Define o espaço interno do botão,
+       aumentando sua área de clique. */
+
+    font-size:18px;
+    /* Define o tamanho do texto do botão. */
+
+    cursor:pointer;
+    /* Altera o cursor para uma mãozinha ao passar sobre o botão,
+       indicando que ele é clicável. */
+
+    border:none;
+    /* Remove a borda padrão do navegador. */
+
+    border-radius:8px;
+    /* Arredonda os cantos do botão. */
+
+    background:#467BB0;
+    /* Define a cor azul de fundo do botão. */
+
+    color:white;
+    /* Define a cor do texto como branco. */
+
+}
+
+/* ==========================
+   EFEITO AO PASSAR O MOUSE
+   ========================== */
+
+button:hover{
+
+    background:#0D47A1;
+    /* Altera a cor do botão quando o usuário passa o mouse,
+       fornecendo um retorno visual da interação. */
+
+}
+
+/* ==========================
+   ACESSIBILIDADE DO TECLADO
+   ========================== */
+
+button:focus{
+
+    outline:4px solid yellow;
+    /* Destaca o botão com uma borda amarela quando ele recebe
+       foco pelo teclado (TAB), facilitando a navegação para
+       usuários que não utilizam o mouse. */
+
+}
+
+/* ==========================
+   CONTEÚDO PRINCIPAL
+   ========================== */
+
+main{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+
+    width:100%;
+    max-width:1200px;
+
+    margin:auto;
+    padding:20px;
+
+}
+
+/* ==========================
+   IMAGENS
+   ========================== */
+
+img, figcaption {
+    width:100%;
+    /* Faz a imagem ocupar toda a largura disponível
+       do elemento pai. */
+    max-width:500px;
+    /* Limita a largura máxima da imagem em 500 pixels,
+       evitando que fique muito grande em telas largas. */
+    display:block;
+    /* Faz a imagem comportar-se como elemento de bloco,
+       permitindo centralização com margin:auto. */
+}
+
+/* ==========================
+   RODAPÉ
+   ========================== */
+
+footer{
+
+    padding:20px;
+    /* Adiciona espaçamento interno ao rodapé. */
+
+    text-align:center;
+    /* Centraliza o texto do rodapé. */
+
+}
+
+/* ==========================
+   MODO ALTO CONTRASTE
+   ========================== */
+
+.altoContraste{
+
+    background:black;
+    /* Altera o fundo da página para preto. */
+
+    color:white;
+    /* Altera a cor dos textos para branco,
+       aumentando o contraste visual. */
+
+}
+
+.altoContraste button{
+
+    background:yellow;
+    background-color:yellow;
+    /* Botões ficam amarelos para maior destaque. */
+
+    color:black;
+    /* Texto preto sobre fundo amarelo,
+       proporcionando excelente contraste. */
+
+}
+
+/* ==========================
+   MODO ESCURO
+   ========================== */
+
+.dark{
+
+    background:#222;
+    background-color:#222;
+    /* Define um fundo cinza escuro para reduzir
+       o brilho da tela. */
+
+    color:white;
+    /* Define os textos na cor branca para facilitar
+       a leitura sobre o fundo escuro. */
+
+}
+
+.dark button{
+
+    background:#444;
+    /* Altera a cor dos botões para um tom de cinza escuro,
+       mantendo a harmonia com o modo escuro. */
+
+}
+
+/* ===========================
+   GRID DOS FLASHCARDS
+=========================== */
+
+.container-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    width:100%;
+}
+
+/* ===========================
+   FLASHCARD
+=========================== */
+/* ===========================
+   FLASHCARD COM EFEITO FLIP
+=========================== */
+
+.flashcard{
+
+    perspective:1000px;
+    width:100%;
+    min-height:120px;
+    cursor:pointer;
+
+}
+
+.flashcard .card{
+
+    position:relative;
+
+    width:100%;
+    height:120px;
+
+    transform-style:preserve-3d;
+
+    transition:transform .7s;
+
+}
+
+.flashcard:hover .card{
+
+    transform:rotateY(180deg);
+
+}
+
+.frente,
+.verso{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:12px;
+
+    font-size:1.2rem;
+
+    color:white;
+
+    backface-visibility:hidden;
+
+    box-sizing:border-box;
+
+    padding:15px;
+
+}
+
+.frente{
+
+    background:#4CAF50;
+
+}
+
+.verso{
+
+    background:#b4b215;
+
+    transform:rotateY(180deg);
+
+}
+
+/* ===========================
+   LADO ESQUERDO
+=========================== */
+
+.lado-esquerdo,
+.lado-direito{
+
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    padding:10px;
+
+}
+
+.coluna{
+
+    width:100%;
+
+}
+
+@media (max-width:900px){
+
+    header{
+
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+    nav{
+
+        justify-content:center;
+
+    }
+
+    main{
+
+        flex-direction:column;
+
+    }
+
+    .lado-esquerdo,
+    .lado-direito{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    body{
+
+        font-size:16px;
+
+    }
+
+    header{
+
+        padding:15px;
+
+    }
+
+    nav{
+
+        width:100%;
+        gap:8px;
+
+    }
+
+    button{
+
+        width:100%;
+        font-size:16px;
+
+    }
+
+    .container-cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card{
+
+        min-height:80px;
+
+    }
+
+    img{
+
+        max-width:100%;
+
+    }
+
+}

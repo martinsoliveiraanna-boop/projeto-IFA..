@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+     <!-- Torna a página responsiva-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Inclusiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1 tabindex="1">Trabalho de Programação</h1>
+<nav>
+    <!-- Botão para recarregar a página principal. -->
+   <button id="inicial" tabindex="2" onclick="window.location.href='index.html'">
+        Inicial
+    </button>
+
+    <!-- Botão para aumentar o tamanho da fonte. -->
+   <button id="fonteMais" tabindex="3">
+        A+
+    </button>
+
+ <!-- Botão para diminuir o tamanho da fonte. -->
+    <button id="fonteMenos" tabindex="4">
+        A-
+    </button>
+
+<!-- Botão que ativa ou desativa o modo de alto contraste-->
+    <button id="contraste" tabindex="5">
+        Alto Contraste
+    </button>
+
+ <!-- Botão que altera a página para o modo escuro para -->
+   <button id="escuro" tabindex="6">
+        Modo Escuro
+    </button>
+
+ <!-- Botão para ler o conteúdo da página em voz alta. -->
+        <button id="ler" onclick="lerPagina()" tabindex="7">🔊 Ler Página</button>
+
+ <!-- Botão para parar de ler o conteúdo da página em voz alta. -->
+        <button onclick="pararLeitura()" tabindex="8">⏹ Parar</button>
+
+</nav>
+
+</header>
+
+<main>
+
+<!-- Coluna da Esquerda -->
+<section class="lado-esquerdo">
+<section class="coluna">
+    <h2 tabindex="9" id="textoprincipal">O que é esta página?</h2>
+    <p id="texto" tabindex="10">
+       Olá. Esta página foi criada como parte de um trabalho do projeto IFA, criado pela colaboração de seis alunos da turma do Segundo E: Anna Luiza, Eduardo, Felipe, João Henrique, Nathally e Samuel da Silva. Clique em qualquer flashcard para observar cada parte do projeto relacionado a modelos cosmológicos.
+    </p>
+    <img id="imagemPrincipal" src="heliocentrico.webp" alt="Imagem do modelo heliocentrico" tabindex="11">
+    <figcaption tabindex="12">
+<p id="descrevefigura">        Imagem do modelo do Heliocentrismo</p>
+    </figcaption>
+
+</section>
+</section>
+
+<!-- Coluna da Direita -->
+<section class="lado-direito">
+<section class="coluna">
+
+<div class="container-cards">
+
+    <div class="flashcard" onkeydown="trocarImagem('1')" onclick="trocarImagem('1')" tabindex="13">
+        <div class="card">
+            <div class="frente">Modelos Cosmológicos</div>
+            <div class="verso">Clique para abrir</div>
+        </div>
+    </div>
+
+    <div class="flashcard" onkeydown="trocarImagem('2')" onclick="trocarImagem('2')" tabindex="14">
+        <div class="card">
+            <div class="frente">Ptolomeu</div>
+            <div class="verso">Clique para abrir</div>
+        </div>
+    </div>
+
+    <div class="flashcard" onkeydown="trocarImagem('3')" onclick="trocarImagem('3')" tabindex="15">
+        <div class="card">
+            <div class="frente">Geocentrismo</div>
+            <div class="verso">Clique para abrir</div>
+        </div>
+    </div>
+
+    <div class="flashcard" onkeydown="trocarImagem('4')" onclick="trocarImagem('4')" tabindex="16">
+        <div class="card">
+            <div class="frente">Copérnico</div>
+            <div class="verso">Clique para abrir</div>
+        </div>
+    </div>
+
+    <div class="flashcard" onkeydown="trocarImagem('5')" onclick="trocarImagem('5')" tabindex="17">
+        <div class="card">
+            <div class="frente">Héliocentrismo</div>
+            <div class="verso">Clique para abrir</div>
+        </div>
+    </div>
+
+</div>
+
+</section>
+</section>
+
+</main>
+
+<footer tabindex="22">
+    Desenvolvido na Aula de Programação Web.
+</footer>
+
+  <div class="Libras">
+  <div vw class="enabled" tabindex="23">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>
